@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.menu{
+    background-color: rgb(180, 180, 39);
+    height: 90px;
+    text-align: center;
+    position: relative;
+}
+.submenu{
+    background-color: rgb(202, 202, 102);
+    height: 40px;
+    text-align: center;
+    position: relative;
+}
+.submenu a{
+    text-decoration: none;
+    color: black;
+}
+.submenu ul{
+    list-style-type: none;
+    margin-left: 43%;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    /*overflow: hidden;*/
+    width: auto;
+}
+.submenu li{
+    float: left;
+    padding: 0 10px 0 10px;
+
+}
+.submenu li:hover{
+    background-color: rgb(128, 128, 63);
+}
+
+.menu h1{
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)   
+}
