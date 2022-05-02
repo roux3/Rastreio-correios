@@ -3,7 +3,9 @@ btn = document.getElementsByClassName("botao")[0];
 btn_salvar = document.getElementsByClassName("botao")[1];
 areaText = document.getElementsByClassName("texto");
 form = document.getElementById("formulario");
-save = document.getElementsByClassName("salvar")[0]
+save = document.getElementsByClassName("salvar")[0];
+save_div = document.getElementsByClassName("save-div")[0]
+erro = document.getElementsByClassName('erro')[0]
 
 areaText[0].addEventListener('focus', function(){
     btn.classList.add('arredondar')
@@ -18,10 +20,12 @@ btn.addEventListener('click', function(){
     var formData = new FormData();
     codigo = areaText[0].value
     const estadoQuery = document.querySelector(".estado")
+    const saveQuery = document.querySelector(".save-div")
     while(estadoQuery.lastElementChild){
         estadoQuery.removeChild(estadoQuery.lastElementChild)
     }
     save.classList.remove('show')
+    erro.classList.remove('show-erro')
     if(codigo != ""){
         codigo = codigo.toUpperCase();
         formData.append("cod",codigo);
@@ -162,11 +166,17 @@ function processamento(data){
             
         
         function verify(v){
+
             if(!v){
                 fetch("salvar.php",{
                     method: "POST",
                     body: formData
                 })
+            }
+
+            else{
+                erro.classList.add("show-erro")
+
             }
         }
         

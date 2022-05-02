@@ -1,17 +1,21 @@
 <?php
 $server = "localhost";
-$username = "root";
-$password = "teste";
+$username = "Estoque";
+$password = "josafa2332";
 $db = "rastreio";
 
 try{
     $conn = new mysqli($server, $username, $password, $db);
+
+    if ($conn->connect_error) {
+        $conn = new mysqli($server, $username, $password);
+        $sql = "CREATE DATABASE IF NOT EXISTS rastreio ";
+        $conn->query($sql);
+        $conn = new mysqli($server, $username, $password, $db);
+      }
 }
 catch(Exception $e){
-    $conn = new mysqli($server, $username, $password);
-    $sql = "CREATE DATABASE IF NOT EXISTS rastreio ";
-    $conn->query($sql);
-    $conn = new mysqli($server, $username, $password, $db);
+    
 }
 
 

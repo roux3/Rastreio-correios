@@ -42,8 +42,9 @@
             </li>
         </ul>
     </section>
-    <section class="salvar">
-        <div>
+    <section class="save-div">
+        <h3 class="erro">Codigo ja existe no banco de dados!</h3>
+        <div class="salvar">
             <input class="nome" type="text" type="text" placeholder="Digite o nome do objeto aqui" >
             <button class="botao">Salvar</button>
         </div>

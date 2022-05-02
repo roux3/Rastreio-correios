@@ -63,6 +63,7 @@
     align-items: center;
     justify-content: center;
     margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
 }
 .corpo input{
     height: 20px;
@@ -138,6 +139,13 @@
     margin-top: 5px;
 }
 
+.save-div h3{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: red;
+    font-size: 20px;
+}
+
 .salvar{
     position: relative;
     left:0;
@@ -149,6 +157,13 @@
     margin-top: 20px;
     display: none;
 }
+.erro{
+    display: none;
+}
+.show-erro{
+    display: block;
+}
+
 .show{
     display: flex;
 }
@@ -162,11 +177,13 @@
     transition: border-radius .2s; 
     margin-right: 0px;
     font-family: 'Montserrat', sans-serif;
-    
+    margin-bottom: 20px;
+
 }
 
 .salvar .botao{
    background-color: black; 
+   margin-bottom: 20px;
 }
 
 .salvar .botao:hover{
@@ -175,5 +192,32 @@
  }
  
 
+.bloco hr{
+    background-color: black;
+    height: 2px;
+    border: none;
+}
+
+.bloco{
+    display: inline-block;
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 3px 5px 6px black;
+    transition: box-shadow linear .2s;
+}
+
+.bloco:hover{
+    box-shadow: 1px 2px 3px black;
+    cursor: pointer;
+}
+
+.cabecalho{
+    margin: 10px 0 3px 10px;
+}
+
+.situacao{
+    margin: 10px;
+} 
 
 

@@ -2,15 +2,15 @@ var estado = document.getElementsByClassName('estado')[0]
          codigos = fetch("codigos.php",{
             method: "GET"
         }).then(response => response.json())
-        .then(function(data){
-            mostrar(data)
+        .then(function(objeto){
+            mostrar(objeto)
         })
-        function mostrar(data){
+        function mostrar(objeto){
             var formData = new FormData();
-            for(i=0;i<data.length;i++){
+            for(i=0;i<objeto.length;i++){
                 
-                var nome = document.createTextNode(data[i].Nome)
-                var codigo = data[i].codigo
+                var nome = document.createTextNode(objeto[i].Nome)
+                var codigo = objeto[i].codigo
                 formData.append("cod",codigo);
                 test = fetch("script.php", { 
                     method: 'POST',
@@ -21,18 +21,18 @@ var estado = document.getElementsByClassName('estado')[0]
                     i = 0
                     var unidades = events[i].unidade
                     var newLi = document.createElement("li");
-                    newLi.classList.add('step')
+                    var newDiv2 = document.createElement("div")
                     var newDiv = document.createElement("div")
-                    newDiv.classList.add('sub-step')
-                    var newH3 = document.createElement("h3");
+                    var separador = document.createElement("hr")
+                    var newH4 = document.createElement("h4");
+                    var newH2 = document.createElement("h2")
                     var unidadeH5 = document.createElement("h5")
                     var horaH5 = document.createElement("h5")
                     var estado = document.getElementsByClassName('estado')[0]
                     var descricao =  document.createTextNode(events[i].descricao)
                     var cidade = unidades.endereco.cidade
                     var uf = unidades.endereco.uf
-                        
-                    console.log(unidades.nome)
+
                     if(unidades.nome == undefined){
                         if(events[i].descricao == "Objeto em trânsito - por favor aguarde"){
                             var unidade = document.createTextNode("de "+unidades.tipo+" em "+cidade+"/"+uf)
@@ -62,11 +62,18 @@ var estado = document.getElementsByClassName('estado')[0]
 
                     var newLi = document.createElement("li");
                     var newDiv = document.createElement("div");
-                    var newH3 = document.createElement("h3");
-                    newH3.appendChild(descricao)
+                    var hora = document.createTextNode(events[i].dtHrCriado.replace("T", "  "))
+                    newH2.appendChild(nome)
+                    newDiv2.appendChild(newH2)
+                    newLi.appendChild(newDiv2)
+                    newLi.appendChild(separador)
+                    newH4.appendChild(descricao)
                     newLi.appendChild(newDiv)
-                    newDiv.appendChild(newH3)
+                    newDiv.appendChild(newH4)
                     estado.appendChild(newLi)
+                    newLi.classList.add('bloco')
+                    newDiv2.classList.add('cabecalho')
+                    newDiv.classList.add('situacao')
                     unidadeH5.appendChild(unidade)
                     newDiv.appendChild(unidadeH5)
     

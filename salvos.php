@@ -24,7 +24,6 @@
     </div>
     <section class="corpo">
         <ul class="estado">
-            
         </ul>
     </section>
 
