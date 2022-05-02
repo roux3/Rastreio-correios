@@ -1,6 +1,3 @@
-<?php
-    include('db.php');
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -26,29 +23,13 @@
         </ul>
     </div>
     <section class="corpo">
-        <div class="entrada">
-
-        </div>
-                <input class="texto" type="text" placeholder="Digite o código aqui..." name="cod">
-                <button class="botao">Enviar</button>
-        </div>
-
-    </section>
-    <section class="resultado">
         <ul class="estado">
-            <li class="step">
-                <img src="https://rastreamento.correios.com.br/static/rastreamento-internet/imgs/correios-sf.png" alt="" width="35px">
-                <h3>Prime importação</h3>
-            </li>
+            
         </ul>
     </section>
-    <section class="salvar">
-        <div>
-            <input class="nome" type="text" type="text" placeholder="Digite o nome do objeto aqui" >
-            <button class="botao">Salvar</button>
-        </div>
-    </section>
-    <script src="test.js"></script>
+
+    <script src="codigos.js">
+        
+    </script>
 </body>
 </html>
-

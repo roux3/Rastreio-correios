@@ -20,17 +20,16 @@
     font-family: 'Montserrat', sans-serif;
 }
 .submenu ul{
-    list-style-type: none;
-    margin-left: 43%;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-    /*overflow: hidden;*/
-    width: auto;
+    position: relative;
+    left:0;
+    top:0;
+    width: 100%;
+    
+    
 }
 .submenu li{
-    float: left;
-    padding: 0 10px 0 10px;
+    display: inline-block;
+    padding: 10px;
 
 }
 .submenu li:hover{
@@ -48,13 +47,22 @@
 }
 
 .corpo{
-    position: relative;
     margin: 0;
+    
+    /*
     position: absolute;
-    top: 50%;
+    top: 30%;
     left: 50%;
     margin-right: -50%;
-    transform: translate(-50%, -50%)   
+    transform: translate(-50%, -50%)   */
+    position: relative;
+    left:0;
+    top:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
 .corpo input{
     height: 20px;
@@ -65,13 +73,14 @@
     transition: border-radius .2s; 
     margin-right: 0px;
     font-family: 'Montserrat', sans-serif;
+
 }
 .corpo input:focus{
     border-radius: 20px 0px 0px 20px;
     
 }
 
-.corpo button{
+.botao{
     margin-left: 0px;
     height: 44px;
     width: 65px;
@@ -81,11 +90,90 @@
     font-family: 'Montserrat', sans-serif;
     color: white;
     border: 2px solid black;
+    transition: border-radius .2s;
 }
-.entrada button:hover{
+.botao:hover{
     cursor: pointer;
     background-color: #0069d9;
 }
-.entrada{
-    padding: 0px;
+.resultado{
+    position: relative;
+    left:0;
+    top:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
 }
+.arredondar{
+    border-radius: 0px 20px 20px 0px;
+
+}
+.resultado{
+    display: flex;
+}
+
+.estado{
+    list-style-type: none;    
+
+}
+
+.step{
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 20px;
+}
+.step img{
+    width: 65px;
+    margin-right: 15px;
+}
+
+.sub-step h3{
+    color: #007bff;
+}
+
+.sub-step *{
+    margin-top: 5px;
+}
+
+.salvar{
+    position: relative;
+    left:0;
+    top:0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    display: none;
+}
+.show{
+    display: flex;
+}
+
+.salvar input{
+    height: 20px;
+    width: 400px;
+    border-radius: 10px 0px 0px 10px;
+    border: 2px solid black;
+    padding: 10px;
+    transition: border-radius .2s; 
+    margin-right: 0px;
+    font-family: 'Montserrat', sans-serif;
+    
+}
+
+.salvar .botao{
+   background-color: black; 
+}
+
+.salvar .botao:hover{
+    background-color: #CACA66; 
+    color: black;
+ }
+ 
+
+
+
