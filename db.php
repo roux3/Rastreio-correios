@@ -1,12 +1,11 @@
 <?php
 $server = "localhost";
-$username = "Estoque";
-$password = "josafa2332";
+$username = "root";
+$password = "teste";
 $db = "rastreio";
 
 try{
     $conn = new mysqli($server, $username, $password, $db);
-
     if ($conn->connect_error) {
         $conn = new mysqli($server, $username, $password);
         $sql = "CREATE DATABASE IF NOT EXISTS rastreio ";

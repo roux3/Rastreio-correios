@@ -10,6 +10,7 @@ var estado = document.getElementsByClassName('estado')[0]
             for(i=0;i<objeto.length;i++){
                 
                 var nome = document.createTextNode(objeto[i].Nome)
+                console.log(nome)
                 var codigo = objeto[i].codigo
                 formData.append("cod",codigo);
                 test = fetch("script.php", { 
@@ -28,7 +29,7 @@ var estado = document.getElementsByClassName('estado')[0]
                     var newH2 = document.createElement("h2")
                     var unidadeH5 = document.createElement("h5")
                     var horaH5 = document.createElement("h5")
-                    var estado = document.getElementsByClassName('estado')[0]
+                    var estado = document.getElementsByClassName('estado2')[0]
                     var descricao =  document.createTextNode(events[i].descricao)
                     var cidade = unidades.endereco.cidade
                     var uf = unidades.endereco.uf

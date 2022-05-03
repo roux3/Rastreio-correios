@@ -120,6 +120,10 @@
 
 }
 
+.estado2{
+    display: grid;
+}
+
 .step{
     display: flex;
     align-items: center;
@@ -205,6 +209,7 @@
     border-radius: 10px;
     box-shadow: 3px 5px 6px black;
     transition: box-shadow linear .2s;
+    margin-bottom: 20px;
 }
 
 .bloco:hover{
