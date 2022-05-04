@@ -23,7 +23,7 @@
         </ul>
     </div>
     <section class="corpo">
-        <ul class="estado2">
+        <ul class="estado-salvos">
         </ul>
     </section>
 

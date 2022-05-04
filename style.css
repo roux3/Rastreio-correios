@@ -62,7 +62,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 100px;
+    margin-top: 50px;
     font-family: 'Montserrat', sans-serif;
 }
 .corpo input{
@@ -118,10 +118,6 @@
 .estado{
     list-style-type: none;    
 
-}
-
-.estado2{
-    display: grid;
 }
 
 .step{
@@ -204,7 +200,7 @@
 
 .bloco{
     display: inline-block;
-    width: 400px;
+    width: 530px;
     border: 1px solid black;
     border-radius: 10px;
     box-shadow: 3px 5px 6px black;
@@ -224,5 +220,14 @@
 .situacao{
     margin: 10px;
 } 
+
+.estado-salvos{
+    display: grid;
+}
+
+.situacao-main{
+    display: flex;
+    padding: 20px 20px 20px 10px;
+}
 
 
