@@ -21,16 +21,17 @@
     </div>
     <div class="submenu">
         <ul>
-            <li><a href="index.php">Rastrear</a></li>
-            <li><a href="salvos.php">Codigos</a></li>
+            <a href="index.php"><li>Rastrear</li></a>
+            <a href="salvos.php"> <li>Codigos</li></a>
         </ul>
     </div>
     <section class="corpo">
         <div class="entrada">
 
-        </div>
+        <div>
                 <input class="texto" type="text" placeholder="Digite o código aqui..." name="cod">
                 <button class="botao">Enviar</button>
+        </div>
         </div>
 
     </section>
@@ -43,7 +44,7 @@
         </ul>
     </section>
     <section class="save-div">
-        <h3 class="erro">Codigo ja existe no banco de dados!</h3>
+        <h3 class="msg"></h3>
         <div class="salvar">
             <input class="nome" type="text" type="text" placeholder="Digite o nome do objeto aqui" >
             <button class="botao">Salvar</button>

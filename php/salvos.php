@@ -11,18 +11,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
     <title>Rastreio</title>
 </head>
-<body>
+<body onload="showCodes()">
     
     <div class="menu">
         <h1>Rastreio Correios</h1>
     </div>
     <div class="submenu">
         <ul>
-        <li><a href="index.php">Rastrear</a></li>
-        <li><a href="salvos.php">Codigos</a></li>
+        <a href="index.php"><li>Rastrear</li></a>
+        <a href="salvos.php"><li>Codigos</li></a>
         </ul>
     </div>
     <section class="corpo">
+    <div class="entrada">
+
+        <div>
+                <input class="texto" type="text" placeholder="Digite o nome do objeto..." name="cod">
+                <button class="botao">Enviar</button>
+        </div>
+        </div>  
         <ul class="estado-salvos">
         </ul>
     </section>

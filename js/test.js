@@ -5,7 +5,7 @@ areaText = document.getElementsByClassName("texto");
 form = document.getElementById("formulario");
 save = document.getElementsByClassName("salvar")[0];
 save_div = document.getElementsByClassName("save-div")[0]
-erro = document.getElementsByClassName('erro')[0]
+msg = document.getElementsByClassName('msg')[0]
 
 areaText[0].addEventListener('focus', function(){
     btn.classList.add('arredondar')
@@ -25,7 +25,7 @@ btn.addEventListener('click', function(){
         estadoQuery.removeChild(estadoQuery.lastElementChild)
     }
     save.classList.remove('show')
-    erro.classList.remove('show-erro')
+    msg.classList.remove('show-msg')
     if(codigo != ""){
         codigo = codigo.toUpperCase();
         formData.append("cod",codigo);
@@ -136,13 +136,16 @@ function processamento(data){
 
 
     btn_salvar.addEventListener("click", function(){
-        var nome = document.getElementsByClassName("nome")[0];
+        let nome = document.getElementsByClassName("nome")[0];
         var formData = new FormData();
+        var form2 = new FormData()
+        form2.append("nome", "all")
         formData.append("cod",codigo)
         formData.append("nome", nome.value)
 
         codigos = fetch("codigos.php",{
-            method: "GET"
+            method: "POST",
+            body: form2
         }).then(response => response.json())
         .then(function(data){
           for(i=0;i<data.length; i++){
@@ -172,11 +175,18 @@ function processamento(data){
                     method: "POST",
                     body: formData
                 })
+                msg.innerHTML = "Salvo com sucesso"
+                msg.style.color = "green"
+                msg.classList.add("show-msg")
+                nome.value = ""
+                
             }
 
             else{
-                erro.classList.add("show-erro")
-
+                msg.innerText = "Codigo ja existe no banco de dados!"
+                msg.style.color = "red"
+                msg.classList.add("show-msg")
+                nome.value = ""
             }
         }
         
